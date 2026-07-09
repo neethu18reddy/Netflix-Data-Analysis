@@ -32,12 +32,7 @@ st.markdown(
     f"""
     <style>
       .stApp {{ background:{NETFLIX_DARK}; color:#FFFFFF; }}
-     h1, h2, h3, h4, h5, h6,
-p,
-.stMarkdown,
-.stCaption {
-    color: #FFFFFF !important;
-}
+      h1, h2, h3, h4, h5, h6, p, label, span, div {{ color:#FFFFFF !important; }}
       .kpi-card {{
         background:#2b2727; padding:22px; border-radius:12px;
         border-left:6px solid {NETFLIX_RED};
@@ -46,65 +41,6 @@ p,
       .kpi-label {{ font-size:14px; color:#bbbbbb !important; letter-spacing:1px; }}
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
-      
-     /* ---------- Multiselect ---------- */
-
-div[data-baseweb="select"] > div {
-    background: white !important;
-}
-
-div[data-baseweb="select"] *,
-div[data-baseweb="select"] input {
-    color: black !important;
-}
-
-div[data-baseweb="select"] input::placeholder {
-    color: #666 !important;
-}
-
-ul[data-baseweb="menu"] {
-    background: white !important;
-}
-
-ul[data-baseweb="menu"] *,
-ul[data-baseweb="menu"] li {
-    color: black !important;
-}
-
-ul[data-baseweb="menu"] li:hover {
-    background: #f2f2f2 !important;
-}
-
-/* Selected tags */
-div[data-baseweb="tag"] {
-    background: #E50914 !important;
-}
-
-div[data-baseweb="tag"] span {
-    color: white !important;
-}
-
-div[data-baseweb="tag"] svg {
-    fill: white !important;
-}
-
-/* Sidebar labels remain white */
-[data-testid="stSidebar"] label {
-    color: white !important;
-}
-      
-      /* Make the label text black */
-      .stMultiSelect label {{
-        color: black !important;
-      }}
-      .stMultiSelect .stMarkdown {{
-        color: black !important;
-      }}
-      
-      /* Make placeholder text black */
-      .stMultiSelect div[data-baseweb="select"] div[role="combobox"] div {{
-        color: black !important;
-      }}
     </style>
     """,
     unsafe_allow_html=True,
