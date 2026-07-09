@@ -42,33 +42,35 @@ st.markdown(
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
       
-      /* FIX: Make multiselect dropdown options visible */
-      .stMultiSelect [role="listbox"] div {{
-        background-color: #2b2727 !important;
-        color: white !important;
+      /* FIX: Make multiselect dropdown have white background and black text */
+      div[data-baseweb="select"] > div {{
+        background-color: white !important;
       }}
-      .stMultiSelect [role="option"] {{
-        background-color: #2b2727 !important;
-        color: white !important;
+      div[data-baseweb="select"] input {{
+        color: black !important;
       }}
-      .stMultiSelect [role="option"]:hover {{
+      ul[data-baseweb="menu"] {{
+        background-color: white !important;
+      }}
+      ul[data-baseweb="menu"] li {{
+        background-color: white !important;
+        color: black !important;
+      }}
+      ul[data-baseweb="menu"] li:hover {{
+        background-color: #f0f0f0 !important;
+        color: black !important;
+      }}
+      ul[data-baseweb="menu"] li div {{
+        color: black !important;
+      }}
+      div[data-baseweb="tag"] {{
         background-color: #E50914 !important;
+      }}
+      div[data-baseweb="tag"] span {{
         color: white !important;
       }}
-      .stMultiSelect [data-testid="stMarkdownContainer"] {{
-        color: white !important;
-      }}
-      /* Selected items */
-      .stMultiSelect [data-baseweb="tag"] {{
-        background-color: #3d3636 !important;
-        color: white !important;
-      }}
-      .stMultiSelect [data-baseweb="tag"] span {{
-        color: white !important;
-      }}
-      /* Input field */
-      .stMultiSelect input {{
-        color: white !important;
+      div[data-baseweb="tag"] svg {{
+        fill: white !important;
       }}
     </style>
     """,
