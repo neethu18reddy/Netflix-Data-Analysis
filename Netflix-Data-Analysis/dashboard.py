@@ -42,18 +42,33 @@ st.markdown(
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
       
-      /* Fix for multiselect - keeps structure intact */
-      div[data-baseweb="select"] input {{
-        color: white !important;
-      }}
-      div[data-baseweb="select"] div {{
+      /* FIX: Make multiselect dropdown options visible */
+      .stMultiSelect [role="listbox"] div {{
         background-color: #2b2727 !important;
-      }}
-      div[data-baseweb="tag"] span {{
         color: white !important;
       }}
-      div[data-baseweb="tag"] svg {{
-        fill: white !important;
+      .stMultiSelect [role="option"] {{
+        background-color: #2b2727 !important;
+        color: white !important;
+      }}
+      .stMultiSelect [role="option"]:hover {{
+        background-color: #E50914 !important;
+        color: white !important;
+      }}
+      .stMultiSelect [data-testid="stMarkdownContainer"] {{
+        color: white !important;
+      }}
+      /* Selected items */
+      .stMultiSelect [data-baseweb="tag"] {{
+        background-color: #3d3636 !important;
+        color: white !important;
+      }}
+      .stMultiSelect [data-baseweb="tag"] span {{
+        color: white !important;
+      }}
+      /* Input field */
+      .stMultiSelect input {{
+        color: white !important;
       }}
     </style>
     """,
