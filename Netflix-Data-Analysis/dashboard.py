@@ -32,7 +32,12 @@ st.markdown(
     f"""
     <style>
       .stApp {{ background:{NETFLIX_DARK}; color:#FFFFFF; }}
-      h1, h2, h3, h4, h5, h6, p, label, span, div {{ color:#FFFFFF !important; }}
+     h1, h2, h3, h4, h5, h6,
+p,
+.stMarkdown,
+.stCaption {
+    color: #FFFFFF !important;
+}
       .kpi-card {{
         background:#2b2727; padding:22px; border-radius:12px;
         border-left:6px solid {NETFLIX_RED};
@@ -42,36 +47,51 @@ st.markdown(
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
       
-      /* Make multiselect have white background with black text */
-      div[data-baseweb="select"] > div {{
-        background-color: white !important;
-      }}
-      div[data-baseweb="select"] input {{
-        color: black !important;
-      }}
-      ul[data-baseweb="menu"] {{
-        background-color: white !important;
-      }}
-      ul[data-baseweb="menu"] li {{
-        background-color: white !important;
-        color: black !important;
-      }}
-      ul[data-baseweb="menu"] li:hover {{
-        background-color: #f0f0f0 !important;
-        color: black !important;
-      }}
-      ul[data-baseweb="menu"] li div {{
-        color: black !important;
-      }}
-      div[data-baseweb="tag"] {{
-        background-color: #E50914 !important;
-      }}
-      div[data-baseweb="tag"] span {{
-        color: white !important;
-      }}
-      div[data-baseweb="tag"] svg {{
-        fill: white !important;
-      }}
+     /* ---------- Multiselect ---------- */
+
+div[data-baseweb="select"] > div {
+    background: white !important;
+}
+
+div[data-baseweb="select"] *,
+div[data-baseweb="select"] input {
+    color: black !important;
+}
+
+div[data-baseweb="select"] input::placeholder {
+    color: #666 !important;
+}
+
+ul[data-baseweb="menu"] {
+    background: white !important;
+}
+
+ul[data-baseweb="menu"] *,
+ul[data-baseweb="menu"] li {
+    color: black !important;
+}
+
+ul[data-baseweb="menu"] li:hover {
+    background: #f2f2f2 !important;
+}
+
+/* Selected tags */
+div[data-baseweb="tag"] {
+    background: #E50914 !important;
+}
+
+div[data-baseweb="tag"] span {
+    color: white !important;
+}
+
+div[data-baseweb="tag"] svg {
+    fill: white !important;
+}
+
+/* Sidebar labels remain white */
+[data-testid="stSidebar"] label {
+    color: white !important;
+}
       
       /* Make the label text black */
       .stMultiSelect label {{
