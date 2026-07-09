@@ -42,7 +42,7 @@ st.markdown(
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
       
-      /* FIX: Make multiselect dropdown have white background and black text */
+      /* Make multiselect have white background with black text */
       div[data-baseweb="select"] > div {{
         background-color: white !important;
       }}
@@ -71,6 +71,19 @@ st.markdown(
       }}
       div[data-baseweb="tag"] svg {{
         fill: white !important;
+      }}
+      
+      /* Make the label text black */
+      .stMultiSelect label {{
+        color: black !important;
+      }}
+      .stMultiSelect .stMarkdown {{
+        color: black !important;
+      }}
+      
+      /* Make placeholder text black */
+      .stMultiSelect div[data-baseweb="select"] div[role="combobox"] div {{
+        color: black !important;
       }}
     </style>
     """,
