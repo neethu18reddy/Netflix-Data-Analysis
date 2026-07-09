@@ -41,6 +41,36 @@ st.markdown(
       .kpi-label {{ font-size:14px; color:#bbbbbb !important; letter-spacing:1px; }}
       .kpi-value {{ font-size:34px; font-weight:800; color:#FFFFFF !important; }}
       [data-testid="stSidebar"] {{ background:#171414; }}
+      /* Fix for multiselect dropdown text color */
+      .stMultiSelect [data-baseweb="select"] span {{
+        color: #FFFFFF !important;
+      }}
+      .stMultiSelect [data-baseweb="select"] input {{
+        color: #FFFFFF !important;
+      }}
+      .stMultiSelect [data-baseweb="select"] div {{
+        background-color: #2b2727 !important;
+      }}
+      /* Fix for dropdown options */
+      .stMultiSelect [data-baseweb="popover"] div {{
+        background-color: #2b2727 !important;
+        color: #FFFFFF !important;
+      }}
+      .stMultiSelect ul li div {{
+        color: #FFFFFF !important;
+      }}
+      /* Fix for selected items */
+      .stMultiSelect [data-baseweb="tag"] span {{
+        color: #FFFFFF !important;
+        background-color: #3d3636 !important;
+      }}
+      .stMultiSelect [data-baseweb="tag"] svg {{
+        fill: #FFFFFF !important;
+      }}
+      /* Fix for placeholder text */
+      .stMultiSelect [data-baseweb="select"] div[role="combobox"] div {{
+        color: #FFFFFF !important;
+      }}
     </style>
     """,
     unsafe_allow_html=True,
